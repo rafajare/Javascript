@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> <meta charset="UTF-8">
+        <body>
+            <script type="text/javascript">
+                var numRandom = Math.floor(Math.random()*100+1); //Genera el número aletorio
+                var contador = 0; //Va almacenando lo intentos
+                var ok=false; //Variable para finalizar el bucle
+            
+                alert("Adivina el numero... si puedes")
+                do{ //Bucle para preguntar hasta que acierte el número
+                var numUsuario = prompt("Introduzca el número");
+                if(numUsuario==numRandom){ 
+                    contador++
+                    document.write("Has acertado!! el número es: " +numRandom +"<strong>" +" (intentos: " +contador +")" +"</strong>");
+                    ok=true;
+                }
+                switch(numUsuario){ //SWITCH el cual finaliza si el valor es FIN y va motrando si el numero es mayor o menor
+                    case "FIN": 
+                    case "fin":  
+                        document.write("Intentalo de nuevo")
+                        ok=true;
+                    default: 
+                        contador++
+                        if(numUsuario<numRandom){
+                            document.write("El número es más grande que " +numUsuario +"<strong>" +" (intentos: " +contador +")" +"<br>" +"</strong>");
+                        } else if (numUsuario>numRandom){
+                            document.write("El número es más pequeño que " +numUsuario +"<strong>" +" (intentos: " +contador +")" +"<br>" +"</strong>");
+                        }
+                }
+                }while (ok==false)
+            </script>
+
+        </body>
+    </head>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="contenedor">
+
+
+
+	</div>
+
+	<script type="text/javascript">
+
+	window.onload=function(){
+		
+	document.onkeyup=mostrarInfoTeclado;
+	document.onkeypress=mostrarInfoTeclado;
+	document.onkeydown=mostrarInfoTeclado;
+
+	}
+	function mostrarInfoTeclado(evento){
+		var evento=evento || window.event;
+		var contenedor=document.getElementById("contenedor");
+		var mensaje="Tipo evento" + evento.type+ " "+ evento.keyCode+" "+ evento.charCode+" " +String.fromCharCode(evento.charCode);
+		contenedor.innerHTML+="<br>"+mensaje;
+	}
+	</script>
+</body>
+</html>

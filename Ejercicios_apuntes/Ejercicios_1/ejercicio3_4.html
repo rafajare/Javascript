@@ -1,0 +1,51 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	//Primera operación que siempre se realiza
+	var num=parseInt(prompt("Introduce un número"));
+	var operador=prompt("Introduce + - * /");
+	var num2= parseInt(prompt("Introduce el segundo número"));
+
+		switch(operador){
+		case '+': document.write(num+num2);break;
+		case '-': document.write(num-num2);break;
+		case '*': document.write(num*num2);break;
+		case '/': document.write(num/num2);break;
+		default: document.write("Error");
+	}
+	//Le pregunta al usuario si quiere hacer más
+	var repetir=confirm("¿Realizar más operaciones?");
+	//en caso de que si quiera hacer más entra en el while
+	
+	while(repetir==true){
+	document.write("<br>");
+	var num=parseInt(prompt("Introduce un número"));
+	var operador=prompt("Introduce + - * /");
+	var num2= parseInt(prompt("Introduce el segundo número"));
+	switch(operador){
+		case '+': document.write(num+num2);break;
+		case '-': document.write(num-num2);break;
+		case '*': document.write(num*num2);break;
+		case '/': document.write(num/num2);break;
+		default: document.write("Error");
+	}
+	//Mientras ponga que si se repetira el bucle. Al decir no, dejará de repetirse
+	var repetir=confirm("¿Realizar más operaciones?");
+	
+	}
+
+	
+
+	
+	
+	
+
+	</script>
+
+</body>
+</html>

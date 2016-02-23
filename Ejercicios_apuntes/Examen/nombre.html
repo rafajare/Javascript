@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<script type="text/javascript">
+
+		 function Equipo(host,direccionIP,CPU,RAM){
+
+			this.host=host;
+			this.direccionIP=direccionIP;
+			this.CPU=CPU;
+			this.RAM=RAM;
+			this.setHost=setHost;
+			this.getEquipo=function(){
+				return this.host+" "+this.direccionIP+" "+this.CPU+" "+this.RAM;
+			}
+
+		}
+
+		function setHost(hhost){
+			this.host=hhost;
+		}
+
+
+		var ordenador=new Equipo("80","127.127.127.127","ZALMAN","12");
+		ordenador.setHost(1);
+		ordenador.getEquipo();
+		console.log(ordenador.getEquipo());
+
+		function Impresora(modelo,anchoPapel,tipo,equipo){
+			
+			this.modelo=modelo;
+			this.anchoPapel=anchoPapel;
+			this.tipo=tipo;
+			this.equipo=equipo;
+			 this.getImpresora=function(){
+				return this.modelo+" "+this.anchoPapel+" "+this.tipo+" "+this.equipo;
+			}
+
+		}
+
+
+		var impresora=new Impresora("XXXX","60","Laser",ordenador.getEquipo());
+		impresora.getImpresora();
+		console.log(impresora.getImpresora());
+
+		var ordenador2=new Equipo("dfsa","df","dsf","dsf");
+		var impresora2=new Impresora("dsA","ASD","DD",ordenador2.getEquipo());
+		console.log(impresora2.getImpresora());
+
+		
+
+
+
+
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<canvas id="canvas1" width="700" height="700"></canvas>
+<script type="text/javascript">
+
+var PosX=100,PosY=100;
+var canvas=document.getElementById("canvas1");
+var contexto_canvas=canvas.getContext("2d");
+contexto_canvas.fillStyle="red";
+//x,y width y height
+contexto_canvas.fillRect(100,100,100,100);
+window.addEventListener("keydown",manejador);
+
+function manejador(event){
+	 var evento=event || window.event;
+
+	 
+
+	 switch(evento.keyCode){
+
+	 	case 37:
+			 PosX-=5;
+			 console.log(evento.keyCode);
+			 clear();
+			 contexto_canvas.fillStyle="green";
+			 contexto_canvas.fillRect(PosX,PosY,100,100); break;
+		case 38:
+			  console.log(evento.keyCode);
+			  PosY-=5;
+			  clear();
+			  contexto_canvas.fillStyle="blue";
+			  contexto_canvas.fillRect(PosX,PosY,100,100); break;
+	 	case 39:
+			  console.log(evento.keyCode);
+			  PosX+=5;
+			  clear();
+			  contexto_canvas.fillStyle="yellow";
+			  contexto_canvas.fillRect(PosX,PosY,100,100); break;
+	 	case 40:
+	  		console.log(evento.keyCode);
+			PosY+=5;
+			clear();
+			contexto_canvas.fillStyle="black";
+			contexto_canvas.fillRect(PosX,PosY,100,100); break;
+
+	 }
+
+}
+
+function clear(){
+	canvas.width=canvas.width;
+}
+</script>
+</body>
+</html>

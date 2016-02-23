@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title></title>
+	<meta charset= "utf-8">
+</head>
+<body>
+	<style type="text/css"></style>
+
+	<script type="text/javascript">
+
+	var nombre=prompt("Dime tu nombre");
+
+	if(nombre.toUpperCase()=="PEPE"){
+		console.log("Eres Pepe");
+	}else{
+		console.log("No eres Pepe");
+	}
+
+	var cadena1="Hola";
+	var cadena2=new String("Hola");
+	if(cadena1==cadena2){
+
+	}
+
+	//Compara por el orden alfabético
+	var v1="perro";
+	var v2="pera";
+	if(v1>v2){
+		console.log("El perro es más grande");
+	}
+
+	//Compara las variables y devuelve 1 si es más grande, 2 si es más pequeña o 0 si son iguales
+	console.log(v1.localeCompare(v2));
+
+	//Busca la posición de una palabra
+	var texto="Hola a todos los alumnos de DAW,alumnos";
+	var subcadena="alumnos";
+	var valor=texto./*last*/indexOf(subcadena,18);
+	console.log(valor);
+
+	var cadena3="Modulos: DWEC, DWES,PRG,BDA.";
+	var inicio=cadena3.indexOf(":");
+	var fin =cadena3.indexOf(".")
+	console.log(cadena3.substring(inicio+1,fin));
+
+	//ARRAY DE LA CADENA
+	var listado=cadena3.substring(inicio+1,fin);
+	var listadofinal=listado.split(",");
+
+	for(var i=0; i<listadofinal.length;i++){
+		console.log(listadofinal[i]);
+	}
+
+	var texto2="Pepe ";
+	console.log(texto2.trim().length);
+	</script>
+</body>
+</html>

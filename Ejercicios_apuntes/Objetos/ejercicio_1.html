@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript" > //Devolver solo las consonates convertidas a mayusculas
+        
+        var cadena=prompt("Introduce una frase"); //Pide la cadena al usuario
+        var cad=[]; //Array que almacena los caractere de la frase
+        var num=0;
+        var cad=cadena.split(""); //Crea un array a partir de lo caracteres de la frase
+        for(var u=0;u<cad.length;u++){
+                      switch(cad[u]){ //Cuenta la vocales que hay en el array
+                case "a":
+                case "e":
+                case "i":
+                case "o":
+                case "u":
+                case "A":
+                case "E":
+                case "I":
+                case "O":
+                case "U":
+                    num++;
+            }
+        }
+        alert("La cadena '" +cadena +"' tiene " +num +" vocales") //Muestra el resultado
+    </script>
+</html>

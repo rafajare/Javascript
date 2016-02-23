@@ -1,0 +1,13 @@
+.ganador{
+	background: green;
+	text-align: center;
+}
+
+.perdedor{
+	background: red;
+	text-align: center;
+}
+.empate{
+	background: orange;
+	text-align: center;
+}

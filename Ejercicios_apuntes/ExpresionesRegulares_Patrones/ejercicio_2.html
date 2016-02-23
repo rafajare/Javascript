@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+              
+                var expcodPostal=new RegExp("^[0-9]{5}$");
+                var repetir=true;
+                while(repetir==true){
+                var codPostal=prompt("Introduce el codigo postal");
+                if(expcodPostal.test(codPostal)){
+                    alert("Codigo postal correcto")
+                    repetir=false;
+                } else {
+                    alert("Codigo Postal incorrecto");
+                    repetir=true;
+                    }
+                }
+                var expTelefono=new RegExp("^['+']{1}[0-9]{11}$");
+                var telefonoExt=prompt("Introduce el telefono internacional");
+                if(expTelefono.test(telefonoExt)){
+                    alert("Telefono internacional correcto")
+                } else {
+                    alert("Telefono internacional incorrecto")
+                }
+                
+                var expFecha=new RegExp("^[0-9]{2}['/']{1}[0-9]{2}['/']{1}[0-9]{4}$");
+                var fecha=prompt("Introduce una fecha en formato dd/mm/aaaa");
+                if(expFecha.test(fecha)){
+                    alert("Fecha correcta")
+                } else {
+                    alert("Fecha incorrecta")
+                }
+
+                var expEmail=new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
+                var email=prompt("Introduce una direccion de correo electronico");
+                if(expEmail.test(email)){
+                    alert("Fecha correcta")
+                } else {
+                    alert("Fecha incorrecta")
+                }
+
+
+        
+                
+                
+                
+                
+                
+                
+                
+                
+            </script>
+        </body>
+    </head>
+</html>

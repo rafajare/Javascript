@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+
+	function Coche(marca,modelo,año_fabricacion){
+		this.marca=marca;
+		this.modelo=modelo;
+		this.año_fabricacion=año_fabricacion;
+
+		this.getMarca=function(){
+			return this.marca;
+		}
+		this.getModelo=function(){
+			return this.modelo;
+		}
+		this.getFabricacion=function(){
+			return this.año_fabricacion;
+		}
+
+	}
+
+	var coche1=new Coche("Ferrari","Scaglietti",2010);
+	var coche2=new Coche("BMW","Z4",2010);
+	var coche3=new Coche("Seat","Toledo",1999);
+	var coche4=new Coche("Fiat","500",1995);
+
+	
+
+document.write("<table border=4>");
+	document.write("<tr>");
+		document.write("<td>");
+		document.write("Marca");
+		document.write("<td>");
+		document.write("Modelo");
+		document.write("<td>");
+		document.write("Fabricacion");
+	for (var i =0; i<= Coche.length; i++) {
+		document.write("<tr>");
+		document.write(Coche.getMarca);
+	};
+
+document.write("</table>");
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

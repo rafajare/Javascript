@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+	.colorRojo{
+		color: red;
+	}
+	.colorAzul{
+		color: blue;
+	}
+
+	</style>
+
+	<h1>Encabezado1</h1>
+	<h1>Encabezado2</h1>
+	<h1>Encabezado3</h1>
+
+	<script type="text/javascript">
+	//Acceder a todos los h1 de la pagina web.
+	var encabezados=document.getElementsByTagName("h1");
+
+	//Forma de cambiarle los estilos (Los tres ejemplos hacen lo mismo pero de distinta forma. Fijarse en className, parece más facil)
+	encabezados[0].style.backgroundColor="green";
+
+	//Modificar el atributo. "Propiedad","valor"
+	encabezados[0].setAttribute("class","colorAzul");
+	encabezados[2].setAttribute("class","colorRojo");
+	//Otra forma de aplicar estilos
+	encabezados[1].className="colorRojo";
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <button onclick="anyadirElementos()">Anyadir Elemento</button>
+	<li>Elemento 1</li>
+	<li>Elemento 2</li>
+	<li>Elemento 3</li>
+	
+
+	<script type="text/javascript">
+
+	function anyadirElementos(){
+		var elementos=document.getElementsByTagName("li");
+		var contador=elementos.length;
+		var contador=contador+1;
+		var li=document.createElement("li");
+		var texto=document.createTextNode("Elemento "+ contador);
+		li.appendChild(texto);
+		document.body.appendChild(li);
+
+	}
+	</script>
+
+	
+
+</body>
+</html>

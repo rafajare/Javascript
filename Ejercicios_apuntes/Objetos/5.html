@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> <meta charset="UTF-8">
+        <body>
+            <style type="text/css"> /* Estilo de la pagina*/ 
+            div{ 
+                text-align:center;
+                background-color: #BDBDBD;
+                width:600px;
+                height:200px;
+            }
+            .f {border:solid;}
+                
+                
+            </style>
+            <script type="text/javascript">
+               function letra_DNI(){ //Funcion para calcular la letra
+                letras=["T","R","W","A","G","M","Y","F","P","D","X","B",
+                    "N","J","Z","S","Q","V","H","L","C","K","E"] //Array que almacena la letras del DNI
+               var letr=document.form.letra.value //Numeros del dni
+               alert("La letra del DNI es: " +letras[letr%23]) //Calculo para saber la letra
+               }
+            </script>
+            <div class="f">
+            <h1>Calcular letra del DNI</h1>
+            <form name="form">
+                 <label for="letra"><strong>Número de DNI</strong></label>
+                <input type="text" name="letra"  maxlength="8" size="8">  </input>
+                <input type="button" name="boton" onclick="letra_DNI()" value="Calcular letra DNI"></input>
+                <p>Ecribe el número del DNI y Pulsa en "calcular letra DNI" y podrás calcular la letra del DNI</p>
+                <p>Calcula el número del DNI,<strong> número de identificación fiscal</strong></p>
+            </form name="pagina">
+            </div>
+        </body>
+    </head>
+</html>

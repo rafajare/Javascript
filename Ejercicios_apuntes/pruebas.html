@@ -1,0 +1,175 @@
+<html>
+<head>
+	<title>Prueba</title>
+	<meta charset="utf-8">
+	
+</head>
+
+<body>
+
+	<style type="text/css">
+	.miEstilo{
+		background: yellow;
+	}
+	</style>
+
+
+	<script type="text/javascript">
+
+	
+
+	function miFuncion(){
+		alert("Has clickado");
+		document.body.style.background ="blue";
+
+	}
+
+	document.write("<h1 class ='miEstilo'> Hola ");
+
+	/*
+	var i=8;
+	var j=3;
+
+	console.log(i++);//MUESTRA 8 VALE 9
+	console.log(++i);//10 MUESTRA VALE 10
+
+	console.log(--i);//9 MUESTRA VALE 9
+	console.log(i--);//9 MUESTRA VALE 8
+
+	console.log(j++ + i); // MUESTRA 11 j=4  i= 8 (vale 12)
+	console.log(--j + ++i);//MUESTRA 12 j=3   i=9
+	*/
+
+
+
+	/*
+	var a=['a', 'b', 'c'];
+	var b=[];
+
+	for (var i =0; i<a.length; i++) {
+		b[i] = a[i]; 
+	};
+
+
+	for (var i = 0; i<b.length; i++) {
+		console.log(b[i]);
+	};
+	*/
+
+
+
+	/*
+
+	var c=['a','b','c'];
+	var d=['a','b','d'];
+	var iguales= true;
+	//var contador =0;
+
+
+	for (var i =0; i<c.length && iguales; i++){
+		if (c[i]!=d[i]){
+			iguales=false;
+			}
+
+			
+			//if (c[i]==d[i]){
+			//contador++;
+			//}
+			
+	};
+		if(iguales==false){
+			document.write("Los vectores no son iguales");
+		} else{
+			document.write("Los vectores  son iguales");
+		}
+
+
+		//if(contador!=c.length){
+		//	document.write("Los vectores no son iguales");
+		}//
+
+		*/
+
+
+		
+		/*
+		var base=parseInt(prompt("Introduce la base"));
+		var exponente=parseInt(prompt("Introduce el exponente"));
+		var resultado=1;
+
+		for (var i = 0; i<=exponente; i++) {
+		if(exponente==0){
+			resultado=1;
+		}else{
+			resultado=resultado*base;
+		}
+
+		};
+
+			document.write(resultado);
+			
+		*/
+
+
+		/*
+		
+		try{
+
+			sentencias
+
+		}catch(ex){
+			alert(ex);
+		}
+		
+		//Permite abreviar codigo. Con document escribe hola adios.
+		with(document){
+			write("hola");
+			write("adios");
+		}
+
+		*/
+
+
+		/*
+
+		var num=parseInt(prompt('Introduce el numero'));
+		var resultado=' ';
+		var contador=0;
+		var encontrado=false;
+
+		for (var i = 1 ; i<=num && encontrado==false; i++) {
+			if(num%i==0){
+				contador++;
+			}else if(contador>2){
+				encontrado=true;
+			}
+		};
+
+		if(contador>2){
+			document.write('No es primo')
+		}else{
+			document.write('Es primo');
+		}
+
+	*/
+
+	/*
+	//El primer for hace la fila, el segundo la columna
+	var num=parseInt(prompt('Introduce el numero'));
+	for (var i = 1; i <= num; i++) {
+			for(var j =1; j<=i; j++){
+
+				document.write(j);
+				
+			}
+			document.write("<br>");
+			
+		}
+	*/
+
+	</script>
+
+	<button onclick="miFuncion()"> Clicka aquí </button>
+
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var miObjeto={
+		nombre:"Pepe",
+		edad:30,
+		getNombre:function(){
+			alert("El nombre es "+ miObjeto.nombre);
+		},
+		getEdad:function(){
+			alert("La edad es "+miObjeto.edad);
+		},
+		setNombre:function(nnombre){
+			miObjeto.nombre=nnombre;
+		},
+
+		setEdad:function(nedad){
+			miObjeto.edad=nedad;
+		},
+
+		toString:function(){
+			document.write(miObjeto.nombre);
+			document.write("<br>");
+			document.write(miObjeto.edad);
+		}
+
+}
+	var edad=57;//"edad" es la edad de miObjeto
+	console.log(miObjeto.nombre);
+	console.log(miObjeto["edad"/*edad*/]);
+	//Cambiamos el nombre y edad
+	miObjeto.nombre="Maria";
+	miObjeto.edad=79;
+	console.log(miObjeto.nombre);
+	//Añades un campo al objeto
+	miObjeto.empleo="Programador javascript";
+	console.log(miObjeto.empleo);
+
+	//Lllamar a la funcion que hemos creado en el objeto
+	miObjeto.getNombre();
+	miObjeto.getEdad();
+
+	//llamar a los sets y mostrar por consola como cambia la edad
+	miObjeto.setEdad("40");
+	console.log(miObjeto.edad);
+	miObjeto.setNombre("Alicia");
+	console.log(miObjeto.nombre);
+	miObjeto.toString();
+
+
+	//Creamos un objeto dentro de otro.
+	var miObjeto2={
+		nombre:"Pepe",
+		edad:48,
+		mostrarDueño:function(){
+			document.write("<br>");
+				document.write(miObjeto2.nombre+ " ");
+				document.write(miObjeto2.edad+ " Es dueño de ");
+		},
+
+
+		moto:{
+			modelo:"Suzuki",
+			año:1984,
+			mostrarMoto:function(){
+				document.write(miObjeto2.moto.modelo+ " ");
+				document.write(miObjeto2.moto.año);
+			},
+
+		}
+	}
+
+		miObjeto2.mostrarDueño();
+		miObjeto2.moto.mostrarMoto();
+		//Creas un nuevo objeto a partir de uno que ya esta creado
+		var miObjeto3=Object.create(miObjeto2);
+		miObjeto3.moto.mostrarMoto();
+		
+		//Creamos un metodo para el objeto 2
+		miObjeto2.getEdad=function(){
+			alert("La edad de "+ miObjeto2.nombre +" es "+ miObjeto2.edad);
+		}
+		miObjeto2.getEdad();
+		//El objeto3 que esta basado en el objeto 2 puede utilizarla también
+		miObjeto3.getEdad();
+
+
+
+
+		//Creamos un constructor. La primera letra del constructor es mayuscula, mientras que la de las funciones minuscula.
+		//Los dos son objetos. Es una forma de trabajar diferente pero que vale para lo mismo
+		function Persona(nombre,edad,dni){
+
+			this.nombre=nombre;
+			this.edad=edad;
+			this.dni=dni;
+
+			this.getNombre=function(){
+				return this.nombre;
+			},
+			this.getEdad=function(){
+				return this.edad;
+			},
+			this.getDni=function(){
+				return this.dni;
+			}
+		}
+
+		var persona=new Persona("Pepe",45,"45124458H");
+		console.log(persona.getNombre());
+		console.log(persona.getDni());
+
+		var persona2=new Persona("Alicia",18,"9785445G");
+		console.log(persona2.getNombre());
+		console.log(persona2.getDni());
+
+
+		//Crear un elemento para el constructor desde fuera.
+		Persona.prototype.setEdad=function(){
+			this.edad=nedad;
+		}
+
+
+
+</script>
+
+</body>
+</html>

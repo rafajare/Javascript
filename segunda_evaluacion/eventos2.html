@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="div1" style="width:100px;height:100px;background-color:yellow" onclick="manejarEventos(event);" onmouseover="manejarEventos(event);" onmousemove="manejarEventos(event);" onmouseup="manejarEventos(event);" onmousedown="manejarEventos(event);">
+
+	<script type="text/javascript">
+	document.onclick=eventRaton;
+
+	function manejarEventos(event){
+
+			console.log(event.type);
+	}
+
+	function eventRaton(evento){
+		var evento1=evento;
+		var coordenadaX=evento1.clientX;
+		var coordenadaY=evento1.clientY;
+
+		console.log("coordenadaX: "+ coordenadaX+" "+ "cordenadaY:" + coordenadaY);
+	}
+	</script>
+</body>
+</html>

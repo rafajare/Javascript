@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="div1">
+
+	<form name="MiFormulario">
+		<input id="campo" type="text" name="anyadir" placeholder="Nombre" length="3-15"></input>
+		<br><br>
+		<input type="button" value="validar" onclick="protocolo();">
+	</form>
+
+	
+
+	</div>
+	<script type="text/javascript">
+	function validarNombre(){
+		var contenido=document.getElementById('campo').value;
+		if(contenido.length>=3 && contenido.length<=15){
+
+			alert("correcto");	
+		}else{
+			alert("incorrecto");
+		}
+		
+
+	}
+
+	function validarDNI(){
+		var contenido=document.getElementById('campo').value;
+		var patron=new RegExp("^[0-5]{1}[0-9]{7}[-]{1}[A-Z]{1}$");
+		if(patron.test(contenido)){
+
+			alert("correcto");
+		}else{
+				alert("incorrecto");
+		}
+		
+	}
+
+	function validarDNI2(){
+		var contenido=document.getElementById('campo').value;
+		var patron=new RegExp("^[0-4]{2}.[0-4]{3}.[0-4]{3}.[-]{1}[a-z]{1}$");
+		if(patron.test(contenido)){
+
+			alert("correcto");
+		}else{
+				alert("incorrecto");
+		}
+	}
+
+
+		function protocolo(){
+			var contenido=document.getElementById('campo').value;
+			var patron=new RegExp("^(http||https||ftp)://www.[a-z]{1-999}.com$");
+		if(patron.test(contenido)){
+			alert("correcto");
+		}else{
+				alert("incorrecto");
+			}
+		}
+
+		
+	
+		
+	
+
+
+	
+	</script>
+
+</body>
+</html>

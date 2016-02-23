@@ -1,0 +1,17 @@
+body{
+	background-color: orange;
+}
+
+#dashboard{
+	width: 70px;
+	background-color: #FF8000;
+	padding: 20px 20px 0 20px;
+	position: absolute;
+	left: -92px;
+	z-index: 100;
+}
+
+#dashboard img{
+	margin-bottom: 20px;
+	border: 1px solid rgb(0,0,0);
+}

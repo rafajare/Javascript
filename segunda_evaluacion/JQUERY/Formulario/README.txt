@@ -1,0 +1,1 @@
+El script no da problemas en consola, y no encuentro el fallo. 

@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	
+	//Sirve para ver la velocidad de cogida del vector
+	console.time("vectorLiteral");
+
+		//Forma 1 de crear vector
+		var vector=["elemento",4,false,undefined];
+
+	console.timeEnd("vectorLiteral");
+
+
+	console.time("vectorArray");
+
+		//Forma 2 de crear vector
+		var vector2=new Array("elemento1","elemento2",3,true);
+
+	console.timeEnd("vectorArray");
+
+	//tYPEoF devuelve el tipo del vector
+	var vector3=["gato",,"perro"];
+	console.log(typeof vector3[1]);
+
+
+	var vector4=new Array(100);
+	console.log(typeof vector4[1]);
+
+
+	for(var i=0;i<vector3.length;i++){
+		console.log(vector3[i]);
+	}
+
+	for(var i=0;i<vector4.length;i++){
+		vector4[i]=new Array(100);
+	}
+
+	//Definir vectores y subvectores
+	var vector5=new Array(2);
+	vector5[0]=[1,2,3,4,5];
+	vector5[1]=[5,6,8];
+	vector5[2]=[6,7,9];
+	console.log(vector5);
+
+
+
+//EJERCICIO DE MATRIZ 100 010 001
+	var vector6=new Array(3);
+	for(var i=0;i<vector6.length;i++){
+		vector6[i]=new Array(3);
+		for(var j=0;j<vector6.length;j++){
+			if(i===j){
+				vector6[i][j]=1;
+			}else{
+				vector6[i][j]=0;
+			}
+
+			if(i>j){
+				vector6[i][j]=5;
+			}
+
+			if(i<j){
+				vector6[i][j]=3;
+			}
+		}
+	}
+	console.table(vector6);
+//FIN DE EJERCICIO DE MATRIZ
+
+	var vector7=new Array("B","A","Z","M");
+	console.log(vector7.sort());
+
+
+
+	var vector8=new Array("44","565","113","563");
+	console.log(vector8.sort());
+
+	function comparanumeros(a,b){
+		return a-b;
+	}
+	console.log(vector8.sort(comparanumeros));
+
+
+	var vector8=new Array("4","5","1","57");
+	vector8.push(12,55);//AÑADE AL ARRAY
+	vector8.shift();//QUITA EL PRIMER ELEMENTO QUE ENTRA EN EL ARRAY
+	vector8.pop();//ELIMINA EL ULTIMO ELEMENTO QUE ENTRA EN EL ARRAY
+	console.log(vector8.indexOf("57"));//TE MUESTRA LA POSICION DEL ELEMENTO
+	vector8.splice(2,1,"78");//Borra del array el elemento numero 2, y señalamos que solo quiere borrar 1 y añadimos el 78 en su lugar
+	console.log(vector8.reverse());	//Devuelve de atrás hacia delante
+
+
+
+
+	//QUITAR ELEMENTOS
+	var animales=new Array("perro", "elefante","gato");
+	animales.splice(animales.indexOf("elefante"),1);
+	console.log(animales);
+
+	//Añadir elementos en una posición dada por el indexOf
+	animales.splice(animales.indexOf("gato"),0,"tigre");
+	console.log(animales);
+
+	//Reemplazar un elemento del vector que esta repetido
+	var letras=new Array("ab","cd","ef","gh","ab");
+	while(letras.indexOf("ab")!=-1){
+	letras.splice(letras.indexOf("ab"),1,"**");
+	}
+	console.log(letras);
+
+	//Borrar un elemento del vector que esta repetido
+	var letras=new Array("ab","cd","ef","gh","ab");
+	while(letras.indexOf("ab")!=-1){
+	letras.splice(letras.indexOf("ab"),1);
+	}
+	console.log(letras);
+
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	//Un array que añade elementos al presionar un boton
+	var funcion=new Array();
+
+	function anyadirValor(){
+		var contenido=document.getElementById('campo').value;
+		var cajaDiv=document.getElementById("div1");
+		if(funcion.indexOf(contenido)>-1){
+		document.getElementById('campo').style.background="red";
+	}else{
+		document.getElementById('campo').style.background="blue";
+		console.log(contenido);
+		funcion.push(contenido);
+		cajaDiv.innerHTML=funcion;
+	}
+		
+
+	
+
+	}
+
+	
+
+
+	</script>
+	
+	<form name="MiFormulario">
+		<input id="campo" type="text" name="anyadir" placeholder="Nombre"></input>
+		<input type="button" value="añadir" onclick="anyadirValor();">
+	</form>
+
+	<div id="div1">
+
+	</div>
+
+	
+
+</body>
+</html>

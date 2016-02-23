@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript">
+
+		//Funciones anónimas
+
+		(function(){
+
+			console.log("Función anónima");
+
+		}());
+
+		(function(valor1,valor2,valor3){
+
+			console.log(valor1);
+			console.log(valor2);
+			console.log(valor3);
+
+		}(1,2,3));
+
+		//Funciones anidadas
+
+		var variable = "global";
+
+		function comprobarVariavles(){
+			var variable = "local";
+			function f(){return variable;}
+
+
+
+			return f;
+		}
+
+		console.log(comprobarVariavles()());
+
+		function anyadirNumeros(num1,num2){
+
+			function anyadir(){
+
+				return num1+num2;
+
+			}
+			return anyadir();
+		}
+
+		function sumador(x){
+
+			return function(y){
+
+				return x+y;
+			};
+
+		}
+
+		var suma4=sumador(4);
+
+		console.log(suma4(3));
+
+		var anyadir=function(){
+			var contador=0;
+			return function(){
+				return contador+=1;
+			}
+		}();
+
+		console.log(anyadir());
+		console.log(anyadir());
+		console.log(anyadir());
+
+		//Expresion regular dia
+
+		var expDia=/^(3[01]|[12][0-9]|[0-9])$/;
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

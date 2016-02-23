@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<!-- Una forma -->
+ 		<button id="boton1" onclick="boton();">Clica aqui</button>
+ 		<button id="boton2">Clica aqui</button>
+		<script type="text/javascript">
+
+		function boton(){
+				alert('hola');
+				alert('adios');
+
+		}
+
+		
+
+		var boton2=document.getElementById("boton2");
+		boton2.onclick=boton();
+
+		boton1.addEventListener("click",function(){
+		alert("Hola Rafa");
+	});
+
+		boton1.addEventListener("click",function(){
+			alert("adios Rafa");
+			boton1.style.background="red";
+		});
+		</script>
+</body>
+</html>

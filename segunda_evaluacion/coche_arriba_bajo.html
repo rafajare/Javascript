@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	img {
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+	<img id="imagen"src='img/descarga.jpg'>
+
+	<script type="text/javascript">
+
+	window.onload=function(){
+		document.onkeydown=coche;
+	}
+	var pos=5;
+	function coche(evento){
+		var imagen=document.getElementById("imagen");
+		var evento=evento || window.event;
+		
+		var recorrer=evento.keyCode;
+
+		switch (recorrer){
+			case 40:pos+=5,imagen.style.marginTop=pos;break;
+			case 38:pos+=5,imagen.style.marginBottom=pos;break;
+			case 39:pos+=5,imagen.style.marginLeft=pos;break;
+			case 37:pos+=5,imagen.style.marginRight=pos;break;
+		}
+	}
+
+	</script>
+</body>
+</html>

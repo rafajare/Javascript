@@ -1,0 +1,142 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+
+		function Edificio(calle,numero,cp){
+
+			this.calle=calle;
+			this.numero=numero;
+			this.cp=cp;
+			this.agregarPlantaspuertas=agregarPlantaspuertas;
+			this.modificarNumero=modificarNumero;
+			this.modificarCalle=modificarCalle;
+			this.modificarCodigoPostal=modificarCodigoPostal;
+			this.mostrarCalle=mostrarCalle;
+			this.mostrarNumero=mostrarNumero;
+			this.mostrarCodigoPostal=mostrarCodigoPostal;
+			this.agregarPropietario=agregarPropietario;
+			this.getEdificio=getEdificio;
+			this.getPropietario=getPropietario;
+		}
+
+		function agregarPlantaspuertas(numPlantas,puertas){
+			this.numPlantas=numPlantas;
+			this.puertas=puertas;
+		}
+
+		function modificarNumero(nuevoNumero){
+			this.numero=nuevoNumero;
+		}
+
+		function modificarCalle(nuevaCalle){
+			this.calle=nuevaCalle;
+		}
+
+		function modificarCodigoPostal(nuevoCP){
+			this.cp=nuevoCP;
+		}
+
+		function mostrarCalle(){
+			return this.calle;
+		}
+
+		function mostrarNumero(){
+			return this.numero;
+		}
+
+		function mostrarCodigoPostal(){
+			return this.cp;
+		}
+
+		function agregarPropietario(nombre,planta,puerta){
+			this.nombre=nombre;
+			this.planta=planta;
+			this.puerta=puerta;
+			this.getPropietario=getPropietario;
+		}
+
+		function mostrarPlantas(){
+
+		}
+
+		function getEdificio(){
+			return this.calle+" "+this.numero+" "+this.cp;
+		}
+
+		function getPropietario(){
+			return this.nombre+" "+this.planta+" "+this.puerta;
+		}
+
+		
+		
+		var edificio1=new Edificio("Av el Cid","31","46860");
+		document.write("<h1>"+edificio1.getEdificio()+"</h1>");
+		document.write("<br>");
+		//edificio1.modificarNumero("15");
+		//console.log(edificio1.getEdificio());
+		
+
+		/*
+		edificio1.agregarPropietario("José Perez","1","1");
+		console.log(edificio1.getPropietario());
+		edificio1.agregarPropietario("Carmen Lopez","1","2");
+		console.log(edificio1.getPropietario());
+		edificio1.agregarPropietario("Manuel Martin","2","3");
+		console.log(edificio1.getPropietario());
+
+		var propietario1=new agregarPropietario("José Perez","1","1");
+		var propietario2=new agregarPropietario("Carmen Lopez","1","2");
+		var propietario3=new agregarPropietario("Manuel Martin","2","3");
+
+		var propietarios=new Array();
+		propietarios.push(propietario1);
+		propietarios.push(propietario2);
+		propietarios.push(propietario3);
+		
+
+
+		document.write(edificio1.getEdificio());
+		document.write("<br>");
+		document.write("<br>");
+	
+		for(var i=0;i<propietarios.length;i++){
+			document.write(propietarios[i].getPropietario());
+			document.write("<br>");
+		}
+		*/
+
+		var plantas_puertas = new Array(3);
+
+			plantas_puertas[0] =new Array(3);
+			plantas_puertas[1] =new Array(3);
+			plantas_puertas[2] =new Array(3);
+			plantas_puertas[0][1]="José perez";
+			plantas_puertas[0][2]="Carmen Lopez";
+			plantas_puertas[2][1]="Manuel Martin";
+			 
+				for (i=0;i<plantas_puertas.length;i++){ 
+   				for(j=0;j<plantas_puertas[i].length;j++){
+   					
+    			  	if(plantas_puertas[i][j]==null){
+    			  	document.write("<b>La planta " + i + "</b>");
+    			  	document.write(""+" puerta "+j+ " está VACIA ");
+    			  	document.write("<br>");
+
+    			  	}else{
+    			  	document.write("<b>La planta " + i + "</b>");
+    			  	document.write(" puerta "+j+ " está ocupada por "+plantas_puertas[i][j]);
+    			  	document.write("<br>");
+    			  	
+   					} 
+				}
+
+			}
+
+
+	</script>
+</body>
+</html>

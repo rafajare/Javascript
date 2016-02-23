@@ -1,0 +1,44 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<script >
+		$(document).on("mobileinit",function(){
+			$.mobile.defaultPageTransition="slide";
+		});
+	</script>
+
+	<title>Ejemplo 1</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+		<div data-role="page" id="home">
+			<div data-role="header"><h1>Curso de Jquery Mobile</h1></div>
+			<img src="Dark_Souls_II_Warrior.png">
+			<a href="#menu" data-role="button"> Entrar </a>
+			<div data-role="footer"><h1>DAW 2015-2016</h1></div>
+		</div>
+
+	<div data-role="page" id="menu">
+
+		<div data-role="header"><h1>Cabecera</h1></div>
+			<div data-role="content">
+
+				<ul>
+					<li>UNIDAD 1</li>
+					<li>UNIDAD 2</li>
+					<li>UNIDAD 3</li>
+				</ul>
+
+				<a href="#home" data-role="button">Salir</a>
+
+			</div>
+		<div data-role="footer"><h1>Pie de pagina</h1></div>
+
+	</div>
+</body>
+</html>

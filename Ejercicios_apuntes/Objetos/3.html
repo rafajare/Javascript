@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+                var fecha=prompt("Intorduce una fecha en formato dd/mm/aa"); //Pide la fecha en formato europeo
+                var dia=fecha.substr(0,2); //Selecciona el dia
+                var fecha=fecha.replace((fecha.substr(0,2)),(fecha.substring(3,5))); //Sustituye la posición dia por la poicion del mes mes
+                fecha=fecha.replace((fecha.substr(2,3)),dia); //Sustituye la posicion del mes(original) por la del dia
+                alert("La decha en formato americano es: "+fecha); //Muetra el resultado
+               
+            </script>
+        </body>
+    </head>
+</html>

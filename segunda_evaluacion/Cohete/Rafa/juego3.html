@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Juego JS</title>
+	<meta charset="utf-8">
+  <script type="text/javascript">
+  
+
+    window.onload=function(){
+        moverMonstruo();
+
+        document.onmousemove=function(event){
+           cambiarPosicion(event);
+        }
+      }
+
+      
+  </script>
+	<link href="estilos.css" type="text/css" rel="stylesheet">
+	<body>
+   <div id="divPuntos" class="divPuntos">
+    </div>
+   <img class="estilo1" src="imagenes/Goku_Dios.png" id="cohete" height="200" width="200">
+   <img class="mostrarMonstruo" src="imagenes/freezer.png" id="monstruo" height="200" width="200">
+   <img id="proyectil" src="imagenes/kameha.png" height="300" width="400">
+
+  <script type="text/javascript" src="scriptJuegoCohete3.js"> </script>
+  </body>
+
+</html>

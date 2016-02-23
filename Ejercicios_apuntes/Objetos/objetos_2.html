@@ -1,0 +1,168 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var cancion={
+		artista:"Pepe",
+		anyo: 2013,
+		tema: "Pepe and friends",
+		getInfo: function(){
+				return this.artista+ " "+this.anyo+ " "+this.tema; 
+		}
+	}
+
+	console.log(cancion.getInfo());
+
+	//Constructor
+	function Prenda(tipo,tejido,color){
+		this.tipo=tipo;
+		this.tejido=tejido;
+		this.color=color;
+		this.getColor=function(){
+			return this.color;
+		}
+	}
+
+	var prenda1=new Prenda("camiseta","algodon","negro");
+	var prenda2=new Prenda("pantalon","tejano","gris");
+	var prenda3=new Prenda("jersey","lana","rojo");
+
+	//Si quieres añadir las prendas a un Array...
+	var prendas=new Array(prenda1,prenda2,prenda3);
+
+	//Comprueba si la prenda 1 tiene un atributo tejido
+	var tejido="tejido" in prenda1;
+
+	console.log(prenda1);
+	console.log(tejido);
+
+	//Borras tejido de prenda 1
+	delete prenda1.tejido;
+	console.log(prenda1);
+	//Vuelves a comprobar si existe el atributo y ahora devuelve false
+	var tejido="tejido" in prenda1;
+	console.log(tejido);
+
+
+	var prenda4=Object.getOwnPropertyNames/*keys*/(prenda2);
+	console.log(prenda4);
+
+
+	//Recorrer los atributos de una prenda
+	for(var prop in prenda3){
+		console.log(prop+" = "+prenda3[prop]);
+	}
+
+	//Forma de crear objetos pero NO recomendada
+	var moto=new Object();
+	moto.modelo="Honda";
+	moto.numRuedas=2;
+	moto.cilindrada=1000;
+	moto.getMarca=function(){
+		return this.marca;
+	}
+
+
+	//Constructor vacio. Tenemos que añadir atributos desde fuera.
+	function Coche(){
+
+	}
+	Coche.prototype.marca="Ford";
+	Coche.prototype.modelo="Focus";
+	Coche.prototype.conductores=new Array("Pepe","Carmen");
+
+	var coche1=new Coche();
+	coche1.conductores.push("Maria");
+
+	console.log(coche1);
+
+
+	function Coche2(color,marca,puertas){
+		this.color=color;
+		this.marca=marca;
+		this.puertas=puertas;
+		this.conductores=new Array("Pepe","Maria");
+
+		if(typeof Coche2._initialized=="undefined"){
+			Coche2.prototype.mostrarColor=function(){
+				alert(this.color);
+			}
+		}
+		Coche2._initialized=true;
+	}
+
+	Coche2.prototype.mostrarColor=function(){
+		alert("HOLAAA");
+	}
+
+	var coche2=new Coche2("negro","ford",5);
+	coche2.mostrarColor();
+
+
+
+	//HERENCIA
+
+	function ClaseA(color){
+		this.color=color;
+		this.mostrarColor=function(){
+		alert("Color: "+ this.color);
+	}
+}
+	function ClaseB(color,modelo){
+		//Preparar SIEMPRE la refeencia a la clase A
+		this.metodo=ClaseA;
+		this.metodo(color);
+		delete this.metodo;
+
+		this.modelo=modelo;
+		this.mostrarModelo=function(){
+			alert("Modelo: "+this.modelo);
+		}
+	}
+
+	function ClaseC(anyo){
+		this.anyoFabricacion=anyo;
+		this.mostrarAnyo=function(){
+			alert("Año: " + this.anyoFabricacion);
+		}
+	}
+	
+	function ClaseD(color,modelo,anyo,marca){
+		this.metodo=ClaseB;
+		this.metodo(color,modelo);
+		this.metodo=ClaseC;
+		this.metodo(anyo);
+		delete this.metodo;
+		
+
+
+		this.marca=marca;
+		this.mostrarMarca=function(){
+			alert("Marca: "+this.marca);
+		}
+	}
+
+
+/*
+	var cocheB1=new ClaseB("blanco","Focus");
+	cocheB1.mostrarColor();
+	cocheB1.mostrarModelo();
+
+	console.log(cocheB1);
+	*/
+	var cocheD1=new ClaseD("blanco","Focus","2014","Ford");
+	cocheD1.mostrarColor();
+	cocheD1.mostrarModelo();
+	cocheD1.mostrarAnyo();
+	cocheD1.mostrarMarca();
+
+	console.log(cocheD1);
+
+
+</script>
+</body>
+</html>

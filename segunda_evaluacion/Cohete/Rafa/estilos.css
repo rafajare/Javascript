@@ -1,0 +1,13 @@
+  body{
+	   	  background-image:url("imagenes/estrellas.jpg");
+	   }
+       
+       .mostrarMonstruo{
+       	  position:absolute;
+       	  visibility: visible;
+       	  left:1500px;
+       }
+       
+       .divPuntos{
+       	color: white;
+       }

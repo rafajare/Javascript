@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<button onclick="crearBoton()">Añadir Boton </button>
+
+	<script type="text/javascript">
+
+		//Crear etiquetas.
+		var parrafo=document.createElement("p");
+		//Añadiir texto a la etiqueta creada.
+		var contenido=document.createTextNode("Texto del parrafo");
+		//Añadimos al parrafo la variable contenido.
+		parrafo.appendChild(contenido);
+		//Añadimos el parrafo al body
+		document.body.appendChild(parrafo);
+
+
+
+		function crearBoton(){
+			var boton=document.createElement("button");
+			var texto=document.createTextNode("clicame");
+			boton.appendChild(texto);
+			document.body.appendChild(boton);
+			
+		}
+
+
+
+	</script>
+</body>
+</html>

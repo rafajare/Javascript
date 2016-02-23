@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+	
+	
+	function cambiarColor(){
+		var contenido=document.getElementById('form').value;
+		var body = document.getElementById('color');
+		if(contenido=="red"){
+			body=document.getElementById('color').style.background="red";
+		}else if(contenido=="green")
+			body=document.getElementById('color').style.background="green";
+		}else{
+			body=document.getElementById('color').style.background="blue";
+		}
+	}
+
+	</script>
+</head>
+<body id ="color">
+<form name="formulario">
+	<select name="cambiarcolor">
+		<option id="form" value="red" onclik=cambiaColor()> rojo </option>
+		<option id="form" value="green" onclik=cambiaColor()>verde </option>
+		<option id="form" value="blue" onclik=cambiaColor()> azul</option>
+	</select>
+</formm>
+</body>
+</html>

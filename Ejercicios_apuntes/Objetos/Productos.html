@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	function Producto(codigo,nombre,precio){
+
+		this.codigo=codigo;
+		this.nombre=nombre;
+		this.precio=precio;
+		this.imprimirDatos=function(){
+			document.write(this.codigo+"<br>");
+			document.write(this.nombre+"<br>");
+			document.write(this.precio+"<br>");
+		}
+		
+	}
+
+
+	var producto1=new Producto("1","Pan","0.40");
+	var producto2=new Producto("2","Tallarines","1.40");
+	var producto3=new Producto("3","Macarrones","1.75");
+
+	var productos=new Array();
+	productos.push(producto1);
+	productos.push(producto2);
+	productos.push(producto3);
+
+	document.write("<h1>"+"Productos Alimenticios"+"</h1>"+"<br>");
+
+	for (var i = 0; i <productos.length; i++) {
+		productos[i].imprimirDatos();
+		document.write("-----------<br>");
+
+	};
+	
+
+	</script>
+	
+</body>
+</html>

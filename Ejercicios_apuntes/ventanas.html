@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+/*
+with(document){
+	write("La altura total "+ screen.height);
+	write("<br> La anchura total "+ screen.width);
+	write("<br>");
+	write("La altura disponible "+ screen.availHeight);
+	write("<br> La altura disponible "+ screen.availWidth);
+	write("<br> La profundidad del color es "+ screen.colorDepth + "<br>");
+}
+	var ventanaNueva=window.open();
+	ventanaNueva.document.write("<h1> Hola mundo </h1>");
+	window.open("http://www.as.com");
+	var ventanaNueva2=window.open("","","width=200,height=200");
+*/
+	
+	
+	function abrirventana(){
+		var url=document.formulario.url.value;
+		miVentana=window.open(url,"", "width=1000,height=1000");
+	}
+
+	function cerrarventana(){
+		miVentana.close();
+	}
+	
+	
+
+	/*
+	var miVentana;	
+	for (var i = 0; i<= 4; i++) {
+		 miVentana=window.open("","", "width=200,height=200");
+		 miVentana.document.write("<button onclick= 'window.close()'> Cerrar ventana </button>");
+		 	};
+	*/	 	
+
+	
+
+</script>	
+</head>
+<body>
+<!--
+<button onclick= abrirventana()> Abrir ventana</button>
+<button onclick= cerrarventana()> Cerrar ventana </button>
+-->
+<form name="formulario">
+	<h2>Escribe la url</h2>
+<input type="text" name="url"></input>
+<br><br>
+<input type="button" name="boton1" value="abrir ventana" onclick=abrirventana()> </input>
+</form>
+
+	
+
+</body>
+</html>

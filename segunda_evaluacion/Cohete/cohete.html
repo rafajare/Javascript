@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="cohete.css">
+</head>
+<body>
+
+	<img id="cohete" src="img/cohete.png"> <br>
+	<img id="proyectil" src="img/proyectil1.png">
+	<img id="monstruo" src="img/monstruo.png">
+
+	<script type="text/javascript">
+  
+  
+
+  window.onload=function(){
+
+  moverMonstruo();
+	document.onclick=disparar;
+
+  var cohete=document.getElementById("cohete");
+  document.onmousemove = function(event){
+      var y = (event.clientY);
+      cohete.style.marginTop = y + 'px';
+  };
+
+ 
+ 	function disparar(){
+    //proyectil.style.visibility="visibility";
+ 		var proyectil=document.getElementById("proyectil");
+    var coord=0;
+ 		setInterval(function(){
+ 				proyectil.style.marginLeft=coord + "px";
+ 				coord=coord+5;
+        if(coord>=1300){
+          coord=0;
+        }
+
+ 		},1);
+
+ 	}
+  
+};	
+
+
+function moverMonstruo(){
+    var monstruo=document.getElementById("monstruo");
+    monstruo.style.marginLeft="1000px";
+ 
+  }
+
+
+</script>
+</body>
+</html>

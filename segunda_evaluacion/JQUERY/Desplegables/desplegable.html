@@ -1,0 +1,70 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/desplegable.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div>
+			<form id="colores">
+			  Selecciona el color:
+			  <input type="color" name="favcolor" value="#ff0000" id="color">
+			</form>
+	</div>
+
+	<h1>Preguntas más frecuentes sobre css</h1>
+
+	<p class="pregunta">
+		Diferencia entre id y class
+	</p>
+
+	<p class="respuesta">
+		Los elementos HTML pueden tener un atributo id y / o un atributo class. El atributo id asigna un nombre a un elemento determinado y debe haber un solo elemento con ese nombre. El atributo class asigna un elemento a una determinada clase y en general no puede haber más de un elemento con el mismo atributo class. CSS te permite aplicar estilos a un atributo id y / o class concreto.
+		Utiliza un estilo específico de id cuando desees restringir las reglas de estilo a un bloque o elemento concreto. Este estilo lo usará un solo elemento con ese id concreto.
+		Usa un estilo específico de class cuando desees aplicar las reglas de estilo a una determinada clase de bloques y elementos.
+	</p>
+		<p class="pregunta">
+		Jerarquía de los elementos HTML
+	</p>
+
+	<p class="respuesta">
+		La forma en que se aplican los estilos CSS a los elementos HTML depende también de la jerarquía de los elementos. Es importante recordar que una regla que se aplica a un descendiente reemplaza el estilo del padre, a pesar de la especificidad o la prioridad de las reglas CSS.
+
+		<p class="pregunta">
+		Restaurar el valor de la propiedad predeterminado
+	</p>
+
+	<p class="respuesta">
+		Debido a que CSS no proporciona una palabra clave "predeterminada", la única manera de restaurar el valor predeterminado de una propiedad es volver a declarar explícitamente dicha propiedad.
+		Por lo tanto, debes tener especial cuidado al escribir reglas de estilo usando selectores (por ejemplo, los selectores por nombre de etiqueta, como p ) que tal vez desees reemplazar con reglas más específicas (como las que usan id o selectores de clase), porque el valor predeterminado original no puede restablecerse automáticamente.
+		Debido a la naturaleza en cascada de CSS, es una buena práctica definir reglas de estilo de una manera lo más concreta posible para evitar aplicar estilo a elementos a los que no se tenía previsto aplicar.
+	</p>
+		<p class="pregunta">
+		Estilos derivados
+	</p>
+
+	<p class="respuesta">
+		CSS no permite que se defina un estilo según los términos de otro. (Consulta la nota de Eric Meyer acerca de la postura del Grupo de trabajo). Sin embargo, la asignación de múltiples clases a un solo elemento puede proporcionar el mismo efecto.
+	</p>
+
+	<p class="pregunta">
+		Normas de estilo que no funcionan
+	</p>
+
+	<p class="respuesta">
+		Las reglas de estilo que son sintácticamente correctas pueden no aplicarse en determinadas situaciones. Puedes utilizar las Reglas de estilo de CSS del Inspector DOM para depurar los problemas de este tipo, pero los casos más frecuentes en los que se ignoran las reglas de estilo se enumeran a continuación.
+	</p>
+	<p class="pregunta">
+		Uso de una propiedad abreviada
+	</p>
+
+	<p class="respuesta">
+		Está bien usar las propiedades abreviadas para la definición de reglas de estilo, ya que utiliza una sintaxis muy compacta. Usar la abreviatura con sólo algunos atributos es posible y correcto, pero hay que recordar que los atributos no declarados se restablecen a los valores predeterminados automáticamente. Esto significa que una norma anterior para un solo atributo podría ser reemplazada implícitamente.
+
+	</p>
+
+</body>
+</html>

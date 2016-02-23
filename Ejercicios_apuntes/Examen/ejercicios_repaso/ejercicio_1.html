@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	var DNI=prompt("Introduzca un DNI");
+	var patron=new RegExp("^[1-6]{1}[1-9]{7}[A-Z]{1}$");
+	if(patron.test(DNI)){
+		alert("Dni correcto");
+	}else{
+		alert("Dni incorrecto");
+	}
+	</script>
+</body>
+</html>

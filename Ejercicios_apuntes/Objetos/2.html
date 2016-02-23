@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script type="text/javascript">
+        var cadena=prompt("Introduce una cadena"); //Pide el texto al usuario
+        var cad=[]; //Array que almacena los caractere de la frase
+        var v=0;
+        var cad=cadena.split(""); //Separa lo caractere y lo guarda en un array
+        for(var u=0;u<cad.length;u++){ //For el cual recorre el array
+            for(var p=0;p<10;p++){ //For utilizado para ir comprobando si el valor de cad[] es un número
+                if(cad[u]==p){//IF compara si es un número
+                    v=v+p; //Suma lo valore numerico
+                }
+            }
+            }
+        
+        alert("La suma de los digitos de la cadena es: "+v)
+        
+            </script>
+        </body>
+    </head>
+</html>

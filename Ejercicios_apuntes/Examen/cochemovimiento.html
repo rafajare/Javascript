@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title></title>
+
+
+</head>
+<body>
+
+	<img id="imagen" src="coche.jpg">
+
+	
+
+	<script type="text/javascript">
+
+		var pix=0;
+
+		setInterval("sumarPixel()",10); 
+
+		function sumarPixel(){
+
+
+			var coche = document.getElementById("imagen");
+
+
+			if(pix<1000){
+				pix+=5;
+				coche.style.marginLeft= pix+"px";
+			}else{
+				pix=0;
+				pix+=5;
+				coche.style.marginLeft= pix+"px";
+			}
+	}
+
+	</script>
+
+</body>
+</html>

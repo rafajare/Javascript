@@ -1,0 +1,139 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+//Declaracion de variables
+var numero1 = 0;
+var numero2 = 0;
+var operacion;
+
+//cuando se apreta un numero, esta funcion lo recibe.
+function asignarNumero(numero){
+    if(document.getElementById("txtNumero").value == "0" || numero1==0){
+        numero1 = numero;
+    }else{
+        numero1 += numero;
+    }
+        document.getElementById("txtNumero").value = numero1;
+}
+
+//Funcion tecla C.
+function teclaC(){
+	numero1 = 0;
+	numero2 = 0;
+	document.getElementById("txtNumero").value = 0;
+}
+
+
+//Esta funcion se llama cada vez que se presiona un boton de operacion.
+function operar(valor){
+	if (numero1 == 0){
+		resultado = parseInt(document.getElementById("txtNumero").value);
+	}
+	numero2 = parseInt(numero1);
+	numero1= 0;
+	operacion = valor;
+}
+
+
+function esIgual(){
+    numero1 = parseInt(numero1);
+	switch (operacion){
+		case 1:
+			numero1 += numero2;
+		break;
+		case 2:
+			numero1 = numero2 - numero1;
+		break;
+		case 3:
+			numero1 *= numero2;
+		break;
+		case 4:
+			numero1 = numero2 / numero1;
+		break;
+		case 5:
+			numero1 = Math.pow(numero2, numero1);
+		break;
+	}
+	document.getElementById("txtNumero").value = numero1;
+	numero2 = parseInt(numero1);
+}
+	</script>
+
+	<table border=0 bgcolor="blue">
+        <tr>
+            <td colspan="4">
+                <input type="text" Id="txtNumero" size="20" maxlength="20" value="0" style="background-color:#acff38;"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="Button" Id="pow" value="exp" onClick="operar(5)" />
+            </td>
+            <td>
+                <input type="Button" Id="Dividir" value="/" onClick="operar(4)" />
+            </td>
+            <td>
+                <input type="Button" Id="Multiplicar" value="x" onClick="operar(3)" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="Button" Id="7" value="7" onClick="asignarNumero('7')" />
+            </td>
+            <td>
+                <input type="Button" Id="8" value="8" onclick="asignarNumero('8')"/>
+            </td>
+            <td>
+                <input type="Button" Id="9" value="9" onclick="asignarNumero('9')"/>
+            </td>
+            <td>
+                <input type="Button" Id="Restar" value="-" onClick="operar(2)" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="Button" Id="4" value="4" onClick="asignarNumero('4')"/>
+            </td>
+            <td>
+                <input type="Button" Id="5" value="5" onclick="asignarNumero('5')"/>
+            </td>
+            <td>
+                <input type="Button" Id="6" value="6" onclick="asignarNumero('6')"/>
+            </td>
+		<td>
+			<input type="Button" Id="Sumar" value="+" onClick="operar(1)" />
+		</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="Button" Id="1" value="1" onClick="asignarNumero('1')"/>
+            </td>
+            <td>
+                <input type="Button" Id="2" value="2" onclick="asignarNumero('2')"/>
+            </td>
+            <td>
+                <input type="Button" Id="3" value="3" onclick="asignarNumero('3')"/>
+            </td>
+            <td>
+                <input type="Button" Id="EsIgual" value="=" onClick="esIgual()" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="Button" Id="0" value="0" onClick="asignarNumero('0')"/>
+            </td>
+	    <td>
+                <input type="Button" Id="," value=","/>
+            </td>
+	    <td>
+		<input type="Button" Id="C" value="C" onClick="teclaC()"/>
+	    </td>
+        </tr>
+    </table>
+
+</body>
+</html>
